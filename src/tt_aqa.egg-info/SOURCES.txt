@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/core/__init__.py
+src/core/api_client.py
+src/pages/__init__.py
+src/schemas/__init__.py
+src/tt_aqa.egg-info/PKG-INFO
+src/tt_aqa.egg-info/SOURCES.txt
+src/tt_aqa.egg-info/dependency_links.txt
+src/tt_aqa.egg-info/requires.txt
+src/tt_aqa.egg-info/top_level.txt

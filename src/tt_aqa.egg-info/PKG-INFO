@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: tt-aqa
+Version: 0.1.0
+Requires-Python: >=3.12
+Requires-Dist: allure-pytest>=2.16.1
+Requires-Dist: faker>=40.39.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: playwright>=1.63.0
+Requires-Dist: pydantic>=2.13.5
+Requires-Dist: pytest>=9.1.1

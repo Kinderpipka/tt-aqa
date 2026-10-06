@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Проверяем получение задачи по идентификатору","76","Получить 1 задачу","tests.api","2026-10-06","passed","2026-10-06","TestPostsAPI","test_tasks","",""
+"Проверка обнавления задачи","385","Обновить задачу","tests.api","2026-10-06","passed","2026-10-06","TestPostsAPI","test_tasks","",""
+"Прверяем, что возвращаеться список задач","261","Получить все задачи","tests.api","2026-10-06","passed","2026-10-06","TestPostsAPI","test_tasks","",""
+"Проверка удаления задачи","188","Удалить задачу","tests.api","2026-10-06","passed","2026-10-06","TestPostsAPI","test_tasks","",""
+"Проверка создания задачи","184","Создания задачи","tests.api","2026-10-06","passed","2026-10-06","TestPostsAPI","test_tasks","",""
+"Проверка что ловятся ошибки структуры","1","Валидация Pydantic модели","tests.api","2026-10-06","passed","2026-10-06","TestPostsAPI","test_tasks","",""

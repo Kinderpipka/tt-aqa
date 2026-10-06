@@ -27,10 +27,22 @@ select = ['E', 'F', 'I']
 
 [tool.mypy]
 strict = true
+disallow_untyped_decorators = false
+exclude = ['tests/.*']
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = 'tests.*'
+disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-addopts = '-v --alluredir=allure-results'
+addopts = "-v --alluredir=allure-results --clean-alluredir"
 testpaths = ['tests']
 markers = [
-    'smoke: quick smoke'
+    'smoke: quick smoke',
+    'regression: regress',
+    'api : api tests',
+    'ui : ui tests',
+    'slow : slow running tests'
 ]
+pythonpath = ["src"]
