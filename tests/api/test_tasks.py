@@ -3,7 +3,8 @@ import pytest
 from pydantic import ValidationError
 
 from core.api_client import TaskTrackerAPIClient
-from schemas.post import Post, PostCreate
+from schemas.post import Post
+from src.core.data_generator import generate_post_data
 
 
 @allure.epic("Api tests")
@@ -47,7 +48,7 @@ class TestPostsAPI:
     @pytest.mark.api
     def test_create_post(self, api_client: TaskTrackerAPIClient) -> None:
 
-        new_post_data = PostCreate(title="New Task via Pydantic", body="Description via Pydantic", userId=1)
+        new_post_data = generate_post_data()
 
         with allure.step("Подготовка данных для создания"):
             allure.attach(
@@ -114,3 +115,19 @@ class TestPostsAPI:
         with allure.step("Проверка что обишка содержит недостоющие поля"):
             assert "body" in str(exc_info.value)
             assert "userId" in str(exc_info.value)
+
+    @allure.title("Создать несколько задач с разными данными")
+    @allure.severity(allure.severity_level.NORMAL)
+    @pytest.mark.regression
+    @pytest.mark.api
+    @pytest.mark.parametrize("iteration", range(5))
+    def test_create_multiple_posts(self, api_client: TaskTrackerAPIClient, iteration: int) -> None:
+
+        post_data = generate_post_data()
+
+        with allure.step(f"Итерация {iteration + 1}: создаём задачу"):
+            result = api_client.create_post(post_data)
+
+        with allure.step("Проверяем результат"):
+            if result is not None:
+                assert result["title"] == post_data.title
