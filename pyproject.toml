@@ -16,6 +16,7 @@ dev = [
     "mypy>=2.3.1",
     "pre-commit>=4.6.2",
     "pytest-asyncio>=1.4.0",
+    "pytest-playwright>=0.9.0",
     "ruff>=0.16.9",
 ]
 
@@ -45,4 +46,4 @@ markers = [
     'ui : ui tests',
     'slow : slow running tests'
 ]
-pythonpath = ["src"]
+pythonpath = ["."]
