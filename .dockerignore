@@ -1,0 +1,10 @@
+.venv
+__pycache__
+*.рус
+.pytest_cache
+allure-report
+allure-results
+.git
+.idea
+.vscode
+*.egg-info

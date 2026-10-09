@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  tests:
+    build: .
+    container_name: tt-aqa-tests
+    volumes:
+      - ./allure-results:/app/allure-results
+    entrypoint:
+      - PYTHONUNBUFFERED=1
