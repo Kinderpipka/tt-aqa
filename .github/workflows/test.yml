@@ -31,6 +31,8 @@ jobs:
         run: uv run playwright install --with-deps chromium
 
       - name: Run tests (Parallel)
+        env:
+          PYTHONPATH: .
         run: uv run pytest tests/ -n auto -v --alluredir=allure-results
 
       - name: Upload Allure results
