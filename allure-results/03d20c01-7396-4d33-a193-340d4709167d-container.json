@@ -1,0 +1,1 @@
+{"uuid": "a1680530-6277-4678-aeba-cde811ce2015", "children": ["c1aae5e9-6bdd-41a1-94f0-73739fe3e778"], "befores": [{"name": "task_service", "status": "passed", "start": 1791738809901, "stop": 1791738809901}], "afters": [{"name": "task_service::<lambda>", "start": 1791738810357}], "start": 1791738809901, "stop": 1791738810357}
