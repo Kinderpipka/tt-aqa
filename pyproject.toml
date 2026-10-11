@@ -48,4 +48,4 @@ markers = [
     'ui : ui tests',
     'slow : slow running tests'
 ]
-pythonpath = ["."]
+pythonpath = ["src"]
