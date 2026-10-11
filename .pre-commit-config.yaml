@@ -12,5 +12,6 @@ repos:
       - id: mypy
         additional_dependencies: [
           "pydantic",
-          "pytest"
+          "pytest",
+          "sqlalchemy>=2.1.4",
         ]
